@@ -7,7 +7,7 @@ export const Card = ({ user }) => {
 
   return <div className={styles.card__wrapper}>
     <div className={styles.card__content}>
-      <img className={styles.card__avatar} src={photo} alt={name} onError={(e) => {
+      <img className={styles.card__avatar} width='70' height='70' src={photo} alt={name} onError={(e) => {
         e.target.onerror = null
         e.target.src = `./default-avatar.png`
       }} />
