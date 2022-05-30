@@ -5,6 +5,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-display: swap;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: $black;
   background-color: $background;
+  font-display: swap;
 }
 
 code {
