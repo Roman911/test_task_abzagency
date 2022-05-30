@@ -32,7 +32,7 @@ export const UploadFile = ({ register, watch, errors, setError, clearErrors }) =
 
   return <div className={classNames(styles.file, { [styles.input_error]: err })}>
     <input type="file" {...register('photo')} id='photo' name='photo' />
-    <label htmlFor="upload-file" className={classNames(styles.file__btn,
+    <label htmlFor="photo" className={classNames(styles.file__btn,
       { [styles.input_error]: err },
       { [styles.file__btn_error]: err }
     )}
