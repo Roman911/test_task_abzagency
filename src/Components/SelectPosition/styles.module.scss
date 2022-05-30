@@ -1,0 +1,80 @@
+@import "src/variabels/colors";
+
+$color1: #f4f4f4;
+
+.radio {
+  margin-bottom: 12px;
+
+  &__preloader {
+    height: 116px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    P {
+      color: $error;
+    }
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+
+    +.radio__label {
+      &:before {
+        content: '';
+        background: $color1;
+        border-radius: 100%;
+        border: 1px solid #D0CFCF;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: -3px;
+        margin-right: 13px;
+        vertical-align: top;
+        cursor: pointer;
+        text-align: center;
+        transition: all 250ms ease;
+      }
+    }
+
+    &:checked {
+      +.radio__label {
+        &:before {
+          background-color: $secondary;
+          box-shadow: inset 0 0 0 4px $color1;
+          border-color: $secondary;
+        }
+      }
+    }
+
+    &:focus {
+      +.radio-label {
+        &:before {
+          outline: none;
+          border-color: $secondary;
+        }
+      }
+    }
+
+    &:disabled {
+      +.radio__label {
+        &:before {
+          box-shadow: inset 0 0 0 4px $color1;
+          border-color: darken($color1, 25%);
+          background: darken($color1, 25%);
+        }
+      }
+    }
+
+    +.radio__label {
+      &:empty {
+        &:before {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

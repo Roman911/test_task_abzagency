@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 100;
+
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 13px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 768px) {
+      padding: 13px 33px;
+    }
+
+    @media only screen and (max-width: 540px) {
+      padding: 13px 12px;
+    }
+  }
+
+  .buttonGrup {
+    button {
+      margin-left: 10px;
+
+      @media only screen and (max-width: 540px) {
+        margin-left: 6px;
+      }
+    }
+  }
+}

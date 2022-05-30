@@ -1,0 +1,28 @@
+@import "src/variabels/colors";
+
+$disabled: #B4B4B4;
+
+.button {
+  background: $primary;
+  padding: 4px 22px 4px 23px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  transition: 150ms;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.87);
+
+  &:hover {
+    background: $hover;
+  }
+
+  &:disabled {
+    background: $disabled;
+    color: #fff;
+  }
+
+  &_user {
+    padding: 4px 29px;
+  }
+}

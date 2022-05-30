@@ -1,0 +1,26 @@
+@import "src/variabels/colors";
+
+// MainLayouts
+.wrapper {
+  background-color: $background;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+// GetRequestLayout
+
+.getRequest {
+  &__wrapper {
+    max-width: 1170px;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 136px 0 35px;
+  }
+
+  &__btn {
+    margin: 35px 0;
+  }
+}

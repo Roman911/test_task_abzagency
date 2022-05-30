@@ -1,0 +1,109 @@
+@import "src/variabels/colors";
+
+$color1: #f4f4f4;
+
+.label {
+  position: relative;
+}
+
+.input {
+  margin: 21px 0 27px;
+  border: 1px solid $border;
+  border-radius: 4px;
+  background-color: $background;
+  padding: 14px 16px;
+  width: 100%;
+
+  &:focus-visible {
+    border: 1px solid $border;
+  }
+
+  &_error {
+    border: 2px solid $error  !important;
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    top: -4px;
+    color: $grey;
+    transition: 300ms;
+
+    &_error {
+      color: $error;
+    }
+
+    &_transform {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 2px 4px;
+      background-color: $background;
+      transform: translateY(-25px);
+    }
+  }
+
+  &__helper {
+    position: absolute;
+    bottom: -37px;
+    left: 17px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $grey;
+
+    &_red {
+      color: $error;
+    }
+  }
+}
+
+// Upload files
+.file {
+  margin: 50px 0;
+  border: 1px solid $border;
+  border-radius: 4px;
+  position: relative;
+  padding: 12px 0;
+
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    padding: 12px 0;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    z-index: 10;
+  }
+
+  &__btn {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border: 1px solid $black;
+    border-radius: 4px 0px 0px 4px;
+    padding: 12px 15px;
+    line-height: 26px;
+
+    &_error {
+      top: -2px;
+      left: -2px;
+    }
+  }
+
+  &__placeholder {
+    margin-left: 16px;
+    color: $grey;
+    margin-left: 97px;
+  }
+
+  &__img {
+    margin-left: 100px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+  }
+
+  &__error {
+    bottom: -18px;
+  }
+}
