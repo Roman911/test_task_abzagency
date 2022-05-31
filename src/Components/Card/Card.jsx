@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import NumberFormat from 'react-number-format';
 import styles from "./styles.module.scss";
 
 export const Card = ({ user }) => {
@@ -26,7 +27,9 @@ export const Card = ({ user }) => {
           <p className={styles.ellipsis}>{email}</p>
           <span className={styles.tooltip__text}>{email}</span>
         </li>
-        <li>{phone}</li>
+        <li>
+          <NumberFormat value={phone} displayType={'text'} format="+## (###) ### ## ##" />
+        </li>
       </ul>
     </div>
   </div>
