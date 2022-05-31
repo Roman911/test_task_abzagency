@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import styles from './styles.module.scss';
 
-export const UploadFile = ({ register, watch, errors, setError, clearErrors }) => {
+const UploadFile = ({ register, watch, errors, setError, clearErrors }) => {
   const err = errors?.['photo'] || errors?.['img'];
 
   React.useEffect(() => {
@@ -49,3 +49,5 @@ export const UploadFile = ({ register, watch, errors, setError, clearErrors }) =
     }
   </div>
 };
+
+export default UploadFile;

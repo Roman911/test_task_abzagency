@@ -4,7 +4,7 @@ import NumberFormat from 'react-number-format';
 import classNames from "classnames";
 import styles from './styles.module.scss';
 
-export const MyControler = ({ control, watch, error }) => {
+const MyControler = ({ control, watch, error }) => {
   return <label className={styles.label}>
     <Controller
       render={({ field: { onChange, value, onBlur } }) => (
@@ -33,3 +33,5 @@ export const MyControler = ({ control, watch, error }) => {
     </span>
   </label>
 };
+
+export default MyControler;

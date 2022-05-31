@@ -3,11 +3,14 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { AxiosStateContext, AxiosDispatchContext } from '../../Context/AxiosInstanceProvider';
 import { useAxios } from '../../hooks/useAxios';
-import { Button, MyInput, SelectPosition, MyControler, Preloader, UploadFile } from '../';
+import { Button, SelectPosition, Preloader } from '../';
 import styles from './styles.module.scss';
 
-import { AxiosStateContext, AxiosDispatchContext } from '../../Context/AxiosInstanceProvider';
+const MyControler = React.lazy(() => import('../Imputs/MyControler'));
+const MyInput = React.lazy(() => import('../Imputs/MyInput'));
+const UploadFile = React.lazy(() => import('../Imputs/UploadFile'));
 
 const phoneRegExp = /^0([0-9]{9})/;
 const baseUrl = 'https://frontend-test-assignment-api.abz.agency/';
@@ -26,7 +29,7 @@ const inputConfig = [
   { name: 'email', placeholder: 'Email' }
 ];
 
-export const Registration = () => {
+const Registration = () => {
   const [responseData, setResponseData] = React.useState(null);
   const [responseErrors, setResponseError] = React.useState(null);
   const [updateUsers, setUpdateUsers] = React.useState(null);
@@ -99,4 +102,6 @@ export const Registration = () => {
       <Preloader />
     </div>}
   </div>
-}
+};
+
+export default Registration;

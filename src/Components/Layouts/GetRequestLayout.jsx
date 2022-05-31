@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 import { Button, Users } from '../';
 import { AxiosStateContext, AxiosDispatchContext } from '../../Context/AxiosInstanceProvider';
 
-export const GetRequestLayout = () => {
+const GetRequestLayout = () => {
   const { usersData, page } = React.useContext(AxiosStateContext);
   const dispatch = React.useContext(AxiosDispatchContext);
   const { data, isLoading, error } = useAxios(`api/v1/users?page=${page}&count=6`);
@@ -25,4 +25,6 @@ export const GetRequestLayout = () => {
       </div>
     }
   </div>
-}
+};
+
+export default GetRequestLayout;

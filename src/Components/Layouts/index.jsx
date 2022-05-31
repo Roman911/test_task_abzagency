@@ -1,2 +1,1 @@
-export { GetRequestLayout } from './GetRequestLayout'
-export { MainLayout } from './MainLayout'
+export { MainLayout } from './MainLayout';

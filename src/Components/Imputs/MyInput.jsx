@@ -2,7 +2,7 @@ import React from "react";
 import classNames from 'classnames';
 import styles from './styles.module.scss';
 
-export const MyInput = ({ register, error, watch, name, placeholder }) => {
+const MyInput = ({ register, error, watch, name, placeholder }) => {
 
   return <label className={styles.label}>
     <input type="text" {...register(name)} className={classNames(styles.input, { [styles.input_error]: error })} />
@@ -18,3 +18,5 @@ export const MyInput = ({ register, error, watch, name, placeholder }) => {
     </span>}
   </label>
 };
+
+export default MyInput;
