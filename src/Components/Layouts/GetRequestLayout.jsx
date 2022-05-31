@@ -7,8 +7,8 @@ import { AxiosStateContext, AxiosDispatchContext } from '../../Context/AxiosInst
 export const GetRequestLayout = () => {
   const { usersData, page } = React.useContext(AxiosStateContext);
   const dispatch = React.useContext(AxiosDispatchContext);
-  const handleClick = () => dispatch({ type: 'setPage' });
   const { data, isLoading, error } = useAxios(`api/v1/users?page=${page}&count=6`);
+  const handleClick = () => dispatch({ type: 'setPage' });
 
   React.useEffect(() => {
     dispatch({ type: 'setLoading', payload: isLoading });

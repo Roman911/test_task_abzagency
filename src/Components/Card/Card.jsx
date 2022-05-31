@@ -31,4 +31,6 @@ export const Card = ({ user }) => {
       </ul>
     </div>
   </div>
-}
+};
+
+export const MemoizedCard = React.memo(Card);
