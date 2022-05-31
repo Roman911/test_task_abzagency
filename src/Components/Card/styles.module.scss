@@ -3,42 +3,18 @@
     width: 33.3333%;
     padding: 15px;
 
-    .tooltip__text {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
     @media only screen and (min-width: 769px) {
       &:nth-child(3n+1) {
         .tooltip__text {
-          left: 55%;
-          margin-left: -70px;
-          transform: translateX(-50%);
-        }
-      }
-
-      &:nth-child(3n+2) {
-        .tooltip__text {
-          left: 0;
-          margin-left: -14px;
+          left: 60%;
         }
       }
 
       &:nth-child(3n) {
         .tooltip__text {
-          right: 50%;
-          margin-right: -70px;
+          right: 60%;
+          transform: translateX(50%);
         }
-      }
-    }
-
-    @media only screen and (min-width: 1025px) {
-      &:nth-child(3n+1) {
-        padding-left: 0;
-      }
-
-      &:nth-child(3n) {
-        padding-right: 0;
       }
     }
 
@@ -108,11 +84,20 @@
     border-radius: 6px;
     padding: 3px 16px;
     position: absolute;
+    top: 34px;
     z-index: 1;
-    bottom: -40px;
     opacity: 0;
     transition: opacity 0.3s;
     border-radius: 4px;
+    transform: translateX(-50%);
+
+    &_name {
+      top: 48px;
+    }
+
+    @media only screen and (max-width: 769px) {
+      display: none;
+    }
   }
 
   &:hover {

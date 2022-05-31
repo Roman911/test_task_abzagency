@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from '../'
+import { Button } from '../';
 import styles from './styles.module.scss';
 
 export const TopBlock = () => {

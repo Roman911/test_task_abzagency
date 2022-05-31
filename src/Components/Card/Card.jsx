@@ -13,10 +13,8 @@ export const Card = ({ user }) => {
         e.target.src = `./default-avatar.png`
       }} />
       <div className={styles.tooltip}>
-        <p className={classNames(styles.ellipsis, styles.card__name)}>
-          {name}
-        </p>
-        <span className={styles.tooltip__text}>{name}</span>
+        <p className={classNames(styles.ellipsis, styles.card__name)}>{name}</p>
+        <span className={classNames(styles.tooltip__text, styles.tooltip__text_name)}>{name}</span>
       </div>
       <ul>
         <li className={styles.tooltip}>
